@@ -1,0 +1,13 @@
+version: '3.3'
+
+services:
+  # ---------------------------
+  # Start Team One Sandbox
+  # ---------------------------
+  team-one:
+    container_name: "team-one-sandbox"
+    hostname: "team-one-sandbox"
+    build: .
+    image: team-one-sandbox
+    ports:
+      - 8080:8080
