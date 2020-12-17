@@ -7,6 +7,7 @@ const fakeProducts = {
     videoGame: { name: "Gaming Console", price: "299", img: "video-game.jpg" }	
 }
 
+// Init sandbox products
 var pricingTables = document.getElementById("pricing-tables");
 for (const key in fakeProducts) {
     if (fakeProducts.hasOwnProperty(key)) {
@@ -26,7 +27,7 @@ for (const key in fakeProducts) {
     }
 }
 
-// Simulate event from other team
+// Simulate case team 3 update receipt total - done
 document.getElementsByClassName('dummy-total-1000000')[0]?.addEventListener("click", () => {
     this.dispatchEvent(
       new CustomEvent("team-three-update-total", {
@@ -36,7 +37,6 @@ document.getElementsByClassName('dummy-total-1000000')[0]?.addEventListener("cli
     )
 });
 
-// Simulate event from other team
 document.getElementsByClassName('dummy-total-9999999')[0]?.addEventListener("click", () => {
     /* TODO: Notify event total is changed to 9999999 to test current amount */
     this.dispatchEvent(
@@ -47,8 +47,9 @@ document.getElementsByClassName('dummy-total-9999999')[0]?.addEventListener("cli
       )
 });
 
-// Simulate other receive event
+// Simulate event receiver "current amount changes"
 window.addEventListener("team-one-current-amount", (e) => {
-    console.log("Received event")
+    /* TODO: Verify that received event contain correct amount. */
+    console.log("Received")
 });
 
